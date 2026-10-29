@@ -56,6 +56,11 @@ const eventSchema = new Schema({
       required: true,
     },
   },
+  organizer: {
+    type: Schema.Types.ObjectId,
+    ref: "User",
+    required: true,
+  },
 });
 
 export const EventModel = model("Event", eventSchema);
